@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Students By Class";
+}
+
+<link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+<h2>Students By Class</h2>
+
+<div style="margin-bottom:15px">
+    <label>Class:</label>
+    @Html.DropDownList(
+        "ClassId",
+        (SelectList)ViewBag.Classes,
+        "-- Select Class --",
+        new { @class = "form-control", style = "width:300px; display:inline-block;" }
+    )
+</div>
+
+<table id="studentsTable" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Class</th>
+        </tr>
+    </thead>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script>
+    var table;
+
+    $(document).ready(function () {
+
+        table = $('#studentsTable').DataTable({
+            ajax: {
+                url: '',
+                dataSrc: 'data'
+            },
+            columns: [
+                { data: 'StudentId' },
+                { data: 'FullName' },
+                { data: 'Age' },
+                { data: 'ClassName' }
+            ]
+        });
+
+        $('#ClassId').change(function () {
+            var classId = $(this).val();
+
+            if (classId) {
+                table.ajax.url(
+                    '@Url.Action("GetStudentsByClass", "Students")' + '?classId=' + classId
+                ).load();
+            } else {
+                table.clear().draw();
+            }
+        });
+    });
+</script>
