@@ -49,8 +49,9 @@
         });
 
         $('#ClassId').change(function () {
+            
             var classId = $(this).val();
-
+            console.log(classId);
             if (classId) {
                 table.ajax.url(
                     '@Url.Action("GetStudentsByClass", "Students")' + '?classId=' + classId
