@@ -24,6 +24,13 @@
             new Class { ClassName = "Class A" },
             new Class { ClassName = "Class B" }
             );
+
+            context.Subjects.AddOrUpdate(
+                s => s.SubjectName,
+                new Subject { SubjectName = "Math", Credits = 3 },
+                new Subject { SubjectName = "Physics", Credits = 4 },
+                new Subject { SubjectName = "Chemistry", Credits = 3 }
+            );
         }
     }
 }

@@ -121,6 +121,7 @@
     <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -128,10 +129,15 @@
     <Compile Include="Migrations\202602071545204_InitialCreate.Designer.cs">
       <DependentUpon>202602071545204_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202602101645295_AddSubjectTable.cs" />
+    <Compile Include="Migrations\202602101645295_AddSubjectTable.Designer.cs">
+      <DependentUpon>202602101645295_AddSubjectTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\SchoolContext.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +224,11 @@
     <Content Include="Views\Students\Create.cshtml" />
     <Content Include="Views\Students\View.cshtml" />
     <Content Include="Views\Students\ByClass.cshtml" />
+    <Content Include="Views\Subjects\Create.cshtml" />
+    <Content Include="Views\Subjects\Delete.cshtml" />
+    <Content Include="Views\Subjects\Details.cshtml" />
+    <Content Include="Views\Subjects\Edit.cshtml" />
+    <Content Include="Views\Subjects\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -228,6 +239,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202602071545204_InitialCreate.resx">
       <DependentUpon>202602071545204_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602101645295_AddSubjectTable.resx">
+      <DependentUpon>202602101645295_AddSubjectTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
