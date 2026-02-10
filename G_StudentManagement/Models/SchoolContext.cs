@@ -14,5 +14,7 @@ namespace G_StudentManagement.Models
         public DbSet<Student> Students { get; set; }
         public DbSet<Class> Classes { get; set; }
         public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Score> Scores { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
     }
 }

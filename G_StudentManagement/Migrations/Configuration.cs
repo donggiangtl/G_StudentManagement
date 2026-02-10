@@ -31,6 +31,11 @@
                 new Subject { SubjectName = "Physics", Credits = 4 },
                 new Subject { SubjectName = "Chemistry", Credits = 3 }
             );
+            context.Teachers.AddOrUpdate(
+                t => t.FullName,
+                new Teacher { FullName = "Mr. Smith" },
+                new Teacher { FullName = "Ms. Johnson" }
+            );
         }
     }
 }

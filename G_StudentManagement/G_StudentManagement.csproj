@@ -133,11 +133,25 @@
     <Compile Include="Migrations\202602101645295_AddSubjectTable.Designer.cs">
       <DependentUpon>202602101645295_AddSubjectTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202602101715121_AddScoreTable.cs" />
+    <Compile Include="Migrations\202602101715121_AddScoreTable.Designer.cs">
+      <DependentUpon>202602101715121_AddScoreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202602101727384_AddTeacherTable.cs" />
+    <Compile Include="Migrations\202602101727384_AddTeacherTable.Designer.cs">
+      <DependentUpon>202602101727384_AddTeacherTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202602101737539_AddTeacherToScore.cs" />
+    <Compile Include="Migrations\202602101737539_AddTeacherToScore.Designer.cs">
+      <DependentUpon>202602101737539_AddTeacherToScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\SchoolContext.cs" />
+    <Compile Include="Models\Score.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +256,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202602101645295_AddSubjectTable.resx">
       <DependentUpon>202602101645295_AddSubjectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602101715121_AddScoreTable.resx">
+      <DependentUpon>202602101715121_AddScoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602101727384_AddTeacherTable.resx">
+      <DependentUpon>202602101727384_AddTeacherTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602101737539_AddTeacherToScore.resx">
+      <DependentUpon>202602101737539_AddTeacherToScore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

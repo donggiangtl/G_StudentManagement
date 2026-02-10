@@ -15,5 +15,8 @@ namespace G_StudentManagement.Models
         public string SubjectName { get; set; }
 
         public int Credits { get; set; }
+
+        public virtual ICollection<Score> Scores { get; set; }
+
     }
 }
